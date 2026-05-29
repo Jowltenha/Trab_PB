@@ -1,3 +1,5 @@
+package wheels;
+
 public class Endereco {
     private String cep; // cep: "20040-002"
     private String logradouro; // nome da rua, avenida, etc... -> logradouro: "Avenida Rio Branco" (A rua)
