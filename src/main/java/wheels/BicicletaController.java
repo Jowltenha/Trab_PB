@@ -21,4 +21,5 @@ public class BicicletaController {
         return bicicletaRepository.findAll();
     }
 
+
 }
