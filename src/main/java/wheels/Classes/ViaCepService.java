@@ -1,4 +1,4 @@
-package wheels;
+package wheels.Classes;
 
 public class ViaCepService {
     public Endereco buscarEnderecoPorCep(String cep) {

@@ -1,4 +1,4 @@
-package wheels;
+package wheels.Classes;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
+import wheels.Status.StatusBicicleta;
 
 @Entity // <-- Avisa ao Spring que esta classe vai virar uma tabela no SQLite
 public class Bicicleta {

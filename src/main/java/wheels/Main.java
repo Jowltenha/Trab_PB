@@ -10,3 +10,6 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 }
+
+
+// http://localhost:8080/bicicletas

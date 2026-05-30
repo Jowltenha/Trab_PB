@@ -1,4 +1,4 @@
-package wheels;
+package wheels.Status;
 
 public enum StatusLocacao {
     EM_ANDAMENTO,
