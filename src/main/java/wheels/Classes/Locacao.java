@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import wheels.Status.StatusLocacao;
+
 import java.time.LocalDateTime;
 
 @Entity // <-- Cria a tabela 'locacao' no SQLite
@@ -57,4 +59,11 @@ public class Locacao {
 
     public double getValor() { return valor; }
     public void setValor(double valor) { this.valor = valor; }
+
+    // Dentro de Locacao.java
+    private StatusLocacao status;
+
+    // Adicione o Getter e Setter
+    public StatusLocacao getStatus() { return status; }
+    public void setStatus(StatusLocacao status) { this.status = status; }
 }

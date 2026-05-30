@@ -1,0 +1,67 @@
+### ==================================================================
+### 1. SEÇÃO DE BICICLETAS
+### ==================================================================
+
+### Cadastrar uma nova Bicicleta (Ela nasce DISPONIVEL por padrão)
+POST http://localhost:8080/bicicletas
+Content-Type: application/json
+
+{
+  "modelo": "Wilier Montegrappa Triestina"
+}
+
+###
+
+### Listar todas as Bicicletas (Para ver os IDs e os Status delas)
+GET http://localhost:8080/bicicletas
+
+###
+
+
+### ==================================================================
+### 2. SEÇÃO DE USUÁRIOS (Com busca automática de CEP por trás)
+### ==================================================================
+
+### Cadastrar Usuário apenas com CEP (ViaCEP vai preencher o resto)
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João Pedro Alehandro ",
+  "cpf": "123.644.578-00",
+  "email": "joao.Ale@email.com",
+  "endereco": {
+    "cep": "24130-082"
+  }
+}
+
+###
+
+### Listar todos os Usuários
+GET http://localhost:8080/usuarios
+
+###
+
+
+### ==================================================================
+### 3. SEÇÃO DE LOCAÇÕES (A Regra de Negócio em Ação!)
+### ==================================================================
+
+### Abrir uma nova Locação (Une o Usuário e a Bicicleta pelos seus IDs)
+### IMPORTANTE: Verifique se os IDs 1 e 2 existem no seu banco. Se não, altere abaixo.
+POST http://localhost:8080/locacoes
+Content-Type: application/json
+
+{
+  "usuario": {
+    "id": 1
+  },
+  "bicicleta": {
+    "id": 2
+  }
+}
+
+###
+
+### Listar todas as Locações Realizadas (Para ver o StatusLocacao ativo)
+GET http://localhost:8080/locacoes
